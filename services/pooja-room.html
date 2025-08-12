@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pooja Room - GreenSpace Interior</title>
+    <style>
+        :root {
+            --green:#1f7a5c;
+            --green-dark:#135c45;
+            --cream:#f5f3ef;
+            --text:#222;
+            --muted:#666;
+            --white:#fff;
+            --max:1200px;
+            --radius:14px;
+            --shadow:0 6px 24px rgba(0,0,0,.08);
+        }
+        * { box-sizing:border-box }
+        body { margin:0; font:16px/1.6 system-ui,Segoe UI,Roboto,Arial; color:var(--text); background:#fff }
+        a { color:var(--green); text-decoration:none }
+        img { max-width:100%; display:block }
+        header { position:sticky; top:0; z-index:50; background:#fff; border-bottom:1px solid #eee }
+        .nav { max-width:var(--max); margin:auto; display:flex; align-items:center; justify-content:space-between; padding:12px 20px }
+        .brand { font-weight:700; font-size:20px; color:var(--green-dark) }
+        .nav a { margin:0 10px; color:var(--text) }
+        .hero { position:relative; background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url('../images/hero-bg.jpg') center/cover no-repeat; color:#fff; text-align:center; padding:60px 20px }
+        .hero h1 { font-size:44px; line-height:1.15; margin:0 0 10px }
+        .hero p { font-size:18px; opacity:.95 }
+        .container { max-width:var(--max); margin:auto; padding:54px 20px }
+        .slider { position:relative; overflow:hidden; border-radius:var(--radius); box-shadow:var(--shadow) }
+        .slides { display:flex; transition:transform .5s ease }
+        .slide { min-width:100%; aspect-ratio:16/9; position:relative }
+        .slide img { width:100%; height:100%; object-fit:cover }
+        .slide figcaption { position:absolute; left:0; right:0; bottom:0; background:linear-gradient(transparent,rgba(0,0,0,.65)); color:#fff; padding:16px }
+        .controls { position:absolute; inset:0; display:flex; align-items:center; justify-content:space-between; padding:0 8px }
+        .controls button { background:rgba(0,0,0,.4); color:#fff; border:0; border-radius:50%; width:42px; height:42px; cursor:pointer; font-size:24px }
+        footer { background:#0f1f19; color:#d7e6e0 }
+        .foot { max-width:var(--max); margin:auto; padding:34px 20px; display:grid; gap:20px }
+        @media(min-width:900px){.foot{grid-template-columns:2fr 1fr 1fr 1fr}}
+        .foot h5 { margin:0 0 10px; color:#fff }
+        .social a { display:inline-flex; align-items:center; justify-content:center; width:36px; height:36px; border-radius:50%; background:#11352b; margin-right:8px; color:#d7e6e0 }
+        .subfoot { border-top:1px solid #214a3c; padding:12px 20px; text-align:center }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="nav">
+            <div class="brand">GreenSpace Interior</div>
+            <div>
+                <a href="../index.html">Home</a>
+                <a href="../index.html#services">Services</a>
+                <a href="../index.html#about">About</a>
+                <a href="../index.html#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Pooja Room</h1>
+            <p>Designing spaces that breathe</p>
+        </section>
+
+        <section class="container">
+            <div class="slider" id="slider">
+                <div class="slides" id="slides"></div>
+                <div class="controls">
+                    <button aria-label="Previous" id="prevBtn">‹</button>
+                    <button aria-label="Next" id="nextBtn">›</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="contact-info">
+            <p>Phone: +91-9704404717</p>
+            <p>Email: greenspaceInteriors369@gmail.com</p>
+            <p>Address: P407, Indis VB City, Near railway Colony, Bolarum, Hyderabad, 500014</p>
+        </div>
+    </footer>
+
+    <script src="../js/services.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const servicePath = window.location.pathname.split('/').pop().replace('.html', '');
+            initServicePage(servicePath);
+        });
+    </script>
+</body>
+</html>

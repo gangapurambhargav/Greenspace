@@ -1,0 +1,30 @@
+{
+  "name": "greenspace",
+  "version": "1.0.0",
+  "description": "GreenSpace Interior Design Website",
+  "main": "server.js",
+  "scripts": {
+    "generate": "node scripts/generate-services.js",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gangapurambhargav/Greenspace.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/gangapurambhargav/Greenspace/issues"
+  },
+  "homepage": "https://github.com/gangapurambhargav/Greenspace#readme"
+}
